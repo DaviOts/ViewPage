@@ -72,12 +72,12 @@ body{
     position: absolute;
     z-index: 1;
     bottom: -3px;
-
+    
+    animation: slide-back 0.3s;
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide 0.5s forwards;
 
 
 }
@@ -140,6 +140,7 @@ ul li a:hover{
     font-size: 25px;
 
 
+
 }
 
 .social-medias a{
@@ -150,6 +151,8 @@ ul li a:hover{
     
     border-radius: 50%;
     transition: background 0.8s;
+
+    color: blueviolet;
 }
 
 .social-medias a:hover{
@@ -173,4 +176,22 @@ footer a{
 
 footer ion-icon {
     margin-bottom: -4px;
+}
+
+@keyframes slide{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
 }
